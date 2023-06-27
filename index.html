@@ -1,10 +1,42 @@
-<!DOCTYPE html>
+<!-- index.html -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ronk.au</title>
-</head>
 <body>
-    <h1>ronk.au</h1>
+<div id="app"></div>
+
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/jsx">
+
+    // Select the div element with 'app' id
+    const app = document.getElementById('app');
+
+
+    function HomePage() {
+
+        function handleClick() {
+
+        }
+
+        return (
+            <div>
+                <Header title="Hey"/>
+                <Header title="hello"/>
+                <Header/>
+
+                <button onClick={handleClick}> Love </button>
+                <Header title={number} ></Header>
+            </div>
+        );
+    }
+
+    function Header( heading ) {
+        return (<h1>{heading.title ? heading.title : "-------"}</h1>)
+    }
+
+    ReactDOM.render(<HomePage/>, app)
+
+</script>
 </body>
 </html>
