@@ -7,7 +7,7 @@ const html = `
 
 async function main() {
     nodeMailer.createTransport({
-        host: ''
+        host: '';
     })
 }
 
